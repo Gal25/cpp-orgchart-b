@@ -39,6 +39,11 @@ namespace ariel{
         this->org = other.org;
     }
 
+    OrgChart::Node* OrgChart::getRoot(){
+        return this->root;
+    }
+
+
     OrgChart& OrgChart::operator=(const OrgChart& other){
         if(&other == this){
             return *this;
@@ -300,6 +305,13 @@ namespace ariel{
 
     //Override the output
     ostream& operator<<(ostream& os,const OrgChart &chart){
+        os << "---------- THE ORGANIEZATION-------------"<<endl;
+        for(auto const &node: chart){
+            os<< node<< " ";
+            os<< "| ";
+
+        } 
+        os<< endl;
         return os;
     }
 
