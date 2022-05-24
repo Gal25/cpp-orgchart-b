@@ -7,7 +7,7 @@
 #include <stack>
 #include <list>
 
-// #pragma once
+#pragma once
 using namespace std;
 
 namespace ariel{
@@ -60,6 +60,7 @@ namespace ariel{
             OrgChart(OrgChart &&other) = default; 
             OrgChart& operator=(OrgChart&& other) = default;
             OrgChart& operator=(const OrgChart& other); // placement operator
+            Node* getRoot();
 
 
             void delOrg(Node * root);
