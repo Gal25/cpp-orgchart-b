@@ -12,11 +12,11 @@ int main(){
     OrgChart organization;
 
     organization.add_root("Gal")
-      .add_sub("Gal", "Noy")         // Now the CTO is subordinate to the CEO
-      .add_sub("Gal", "Romi")         // Now the CFO is subordinate to the CEO
-      .add_sub("Noy", "Michal")         // Now the COO is subordinate to the CEO
-      .add_sub("Romi", "Shani") // Now the VP Software is subordinate to the CTO
-      .add_sub("Romi", "Liza");      // Now the VP_BI is subordinate to the COO
+      .add_sub("Gal", "Noy")         
+      .add_sub("Gal", "Romi")         
+      .add_sub("Noy", "Michal")        
+      .add_sub("Romi", "Shani")        
+      .add_sub("Romi", "Liza");      
 
     cout << organization << endl;
     cout <<"Level Order:"<<endl;
