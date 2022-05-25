@@ -4,7 +4,6 @@
 #include <stdexcept>
 #include <vector>
 #include <queue>
-// #include <stack>
 
 using namespace std;
 
@@ -115,8 +114,8 @@ namespace ariel{
         if(n->name == name){
             return n;
         }
-        for (size_t i = 0; i < n->subs.size(); i++){
-            Node * res = this->getNode(n->subs[i], name);
+        for (int i = 0; i < n->subs.size(); i++){
+            Node * res = this->getNode(n->subs[(size_t)i], name);
                 if (res != nullptr){
                     return res;
                 }
@@ -306,11 +305,13 @@ namespace ariel{
     //Override the output
     ostream& operator<<(ostream& os,const OrgChart &chart){
         os << "---------- THE ORGANIEZATION-------------"<<endl;
+        os << "~ ";
         for(auto const &node: chart){
             os<< node<< " ";
             os<< "| ";
 
-        } 
+        }
+        os << "~"; 
         os<< endl;
         return os;
     }
